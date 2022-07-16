@@ -36,7 +36,7 @@ public class PersonaController {
         return new ResponseEntity<>(todasLasPersonas, HttpStatus.OK);
     }
     
-    
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{id}")
     @ResponseBody
     public ResponseEntity<Persona> buscarPersonaById(@PathVariable("id") Long id){
